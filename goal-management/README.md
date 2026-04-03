@@ -27,11 +27,3 @@ Full-stack personal goal planning application with OKR-style quarterly planning.
 | Database | Firebase Firestore |
 | Auth | Firebase Auth (email/password) |
 
----
-
-## Settle App
-**Repo:** [bewayo2/SettleApp](https://github.com/bewayo2/SettleApp) · `Python` · `Private`
-
-Python application for managing and tracking structured task lists around settlements or project completion workflows.
-
-**Stack:** Python

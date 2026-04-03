@@ -13,8 +13,9 @@ A portfolio of software projects built by [@bewayo2](https://github.com/bewayo2)
 | 3 | [AI Productivity Tools](#-ai-productivity-tools) | MasterLister, Strategic Blueprint GPTs, AI Hiring Tool, Audio Transcription App, Ref Extractor |
 | 4 | [Marketing & Content](#-marketing--content) | Caption Generator, Keyword Generator, Blog Outline & SEO Generator, Training Mindmaps |
 | 5 | [EMR & Practice Management](#-emr--practice-management) | Paradyme (OpenEMR Fork), Paradyme Aide, EMR Select |
-| 6 | [Goal & Project Management](#-goal--project-management) | PG Annie, Settle App |
-| 7 | [Data & Research](#-data--research) | AUROC Demo, BHS Flow Map Generator, Ref Extractor |
+| 6 | [Revenue Cycle Management](#-revenue-cycle-management) | Settle |
+| 7 | [Goal & Project Management](#-goal--project-management) | PG Annie |
+| 8 | [Data & Research](#-data--research) | AUROC Demo, BHS Flow Map Generator, Ref Extractor |
 
 ---
 
@@ -242,6 +243,37 @@ Interactive tool guiding healthcare practices through structured criteria to ide
 
 ---
 
+## Revenue Cycle Management
+
+AI-powered tools for medical billing, claim recovery, and practice financial operations.
+
+### [Settle](https://github.com/bewayo2/SettleApp) `Python` `Private`
+> AI-powered revenue cycle management for independent medical practices.
+
+Medical practices typically see 5–15% of claims denied on first submission, and physicians lose an average of 13 hours/week to payer administrative work. Settle automates EOB analysis, claim appeals, patient billing, and revenue tracking so practices can focus on care.
+
+**Key stats Settle addresses:**
+- Up to 15% initial claim denial rate (private payers)
+- 70% of denied claims overturned on appeal — but only after costly rework
+- 1–3% of net revenue lost annually to commercial underpayments
+- Target: A/R under 30–40 days (AAFP benchmark)
+
+**Features:**
+- **AI EOB Analysis** — Reads every Explanation of Benefits in seconds, flags underpayments, denials, and discrepancies across all major payer formats
+- **Automated Claim Follow-Up** — Auto-generates appeals with supporting documentation; tracks every claim from submission to payment; prioritises by recovery value
+- **Real-Time Revenue Dashboard** — Live cash-flow forecasting, payer performance scorecards, aging bucket analysis
+- **Smart Patient Billing** — Calculates patient responsibility post-insurance, sends clear statements, supports payment plans — fully HIPAA compliant
+
+**How it works:**
+1. Connect your practice — import billing records in minutes, no IT overhaul
+2. AI analyses every claim — cross-references contracted rates, identifies every underpayment and denial
+3. Recover what you're owed — Settle generates appeals, sends statements, tracks every dollar to resolution
+
+**Stack:** Python · AI/LLM · HIPAA Compliant  
+**Contact:** bewaji@bewajihealth.com
+
+---
+
 ## Goal & Project Management
 
 Personal and business planning tools.
@@ -252,15 +284,6 @@ Personal and business planning tools.
 Users set long-horizon goals (10/5/3/1 years) across life buckets, then cascade them into quarterly OKRs, monthly goals, and weekly activities. Includes a dashboard for at-risk items, weekly check-ins, and workload calculations.
 
 **Stack:** React · TypeScript · Tailwind CSS · Python FastAPI · Firebase Auth · Firestore
-
----
-
-### [Settle App](https://github.com/bewayo2/SettleApp) `Python` `Private`
-> App to manage and track settlement tasks.
-
-Python application for managing structured task lists and progress tracking around settlements or project completion workflows.
-
-**Stack:** Python
 
 ---
 
