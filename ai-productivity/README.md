@@ -73,3 +73,36 @@ Lightweight utility to convert audio files to text using OpenAI Whisper. Focused
 Browser-based tool for researchers to extract structured citation data from academic paper DOIs and URLs — no server, runs entirely in the browser.
 
 **Stack:** HTML · JavaScript
+
+---
+
+## arvohire
+**Repo:** [bewayo2/arvohire](https://github.com/bewayo2/arvohire) · `Python` · `Private`
+
+Culture-based recruitment platform that goes beyond skills matching to evaluate candidate-culture fit. Structures the hiring process around organisational values, team dynamics, and behavioural indicators — helping teams hire for long-term retention as much as capability.
+
+**Stack:** Python
+
+---
+
+## BrainKick
+**Repo:** [bewayo2/Brainkick](https://github.com/bewayo2/Brainkick) · `Private`
+
+Chat-to-document and chat-to-PDF platform. Conversational interface that lets users generate, edit, and export structured documents and PDFs through natural language chat. Built as a multi-service architecture:
+
+| Repo | Role |
+|------|------|
+| [Brainkick](https://github.com/bewayo2/Brainkick) | Core app |
+| [BrainkickFE](https://github.com/bewayo2/BrainkickFE) | Frontend |
+| [Brainkick-BE](https://github.com/bewayo2/Brainkick-BE) | Backend API |
+| [BrainKick-Reg](https://github.com/bewayo2/BrainKick-Reg) | Registration service |
+| [BrainKick-Live](https://github.com/bewayo2/BrainKick-Live) | Live collaboration layer |
+
+---
+
+## Utility Projects
+**Repo:** [bewayo2/Utilityprojects](https://github.com/bewayo2/Utilityprojects) · `Python` · `Private`
+
+Collection of reusable Python utility scripts and automation tools supporting other projects — data processing helpers, file manipulation tools, and automation snippets.
+
+**Stack:** Python

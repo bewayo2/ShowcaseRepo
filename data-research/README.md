@@ -54,3 +54,19 @@ Web app that converts free-text process descriptions into rendered Graphviz diag
 Browser-based tool for researchers to extract and format structured citation data from academic paper DOIs and URLs. Runs entirely client-side — no server required.
 
 **Stack:** HTML · JavaScript
+
+---
+
+## SciWrap
+**Repo:** [bewayo2/SciWrap](https://github.com/bewayo2/SciWrap) · `Python` · `Private`
+
+Delivers personalised journal article summaries based on user-defined keywords. Users submit topic areas or keywords; SciWrap retrieves relevant journal articles, summarises them using an LLM, and delivers digestible research briefings — keeping clinicians and researchers current without manual literature review.
+
+**Stack:** Python · LLM · Academic APIs
+
+---
+
+## Data Analysis
+**Repo:** [bewayo2/Data-Analysis](https://github.com/bewayo2/Data-Analysis) · `Public`
+
+Collection of data analysis notebooks and scripts spanning clinical and operational datasets. Includes exploratory data analysis, visualisations, and research scripts.

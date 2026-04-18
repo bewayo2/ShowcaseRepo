@@ -9,13 +9,14 @@ A portfolio of software projects built by [@bewayo2](https://github.com/bewayo2)
 | # | Category | Projects |
 |---|----------|----------|
 | 1 | [Healthcare AI](#-healthcare-ai) | WoundCareAI, ScanAuditor, BHS Virtual Health Assistant, Sepsis Predictor, BHS Discharge Summary Generator |
-| 2 | [Healthcare Operations](#-healthcare-operations) | RoomManager, Scan Progress Tracker, SJH Equipment Commissioning, SJH Swimlane Generator, AI OCR Sorter |
-| 3 | [AI Productivity Tools](#-ai-productivity-tools) | MasterLister, Strategic Blueprint GPTs, AI Hiring Tool, Audio Transcription App, Ref Extractor |
-| 4 | [Marketing & Content](#-marketing--content) | Caption Generator, Keyword Generator, Blog Outline & SEO Generator, Training Mindmaps |
-| 5 | [EMR & Practice Management](#-emr--practice-management) | Paradyme (OpenEMR Fork), Paradyme Aide, EMR Select |
+| 2 | [Healthcare Operations](#-healthcare-operations) | RoomManager, Scan Progress Tracker, SJH Equipment Commissioning, SJH Swimlane Generator, AI OCR Sorter, SentinelQG, SJH Org Chart, Inventory Matching |
+| 3 | [AI Productivity Tools](#-ai-productivity-tools) | MasterLister, Strategic Blueprint GPTs, AI Hiring Tool, arvohire, Audio Transcription App, Ref Extractor, BrainKick, Utility Projects |
+| 4 | [Marketing & Content](#-marketing--content) | Caption Generator, Shorts Generator, Keyword Generator, Blog Outline & SEO Generator, Training Mindmaps, Articles & Blogs |
+| 5 | [EMR & Practice Management](#-emr--practice-management) | Paradyme, Paradyme Aide, EMR Select, Local Paradyme |
 | 6 | [Revenue Cycle Management](#-revenue-cycle-management) | Settle |
 | 7 | [Goal & Project Management](#-goal--project-management) | PG Annie |
-| 8 | [Data & Research](#-data--research) | AUROC Demo, BHS Flow Map Generator, Ref Extractor |
+| 8 | [Data & Research](#-data--research) | AUROC Demo, BHS Flow Map Generator, Ref Extractor, SciWrap, Data Analysis |
+| 9 | [Security & Compliance](#-security--compliance) | 27Readiness |
 
 ---
 
@@ -72,6 +73,15 @@ Predictive model using clinical data to identify patients at risk of sepsis, ena
 
 Systems for managing clinical workflows, inventory, equipment, and process documentation.
 
+### [SentinelQG](https://github.com/bewayo2/SentinelQG) `C#` `Private`
+> Enterprise quality management solution for healthcare organisations.
+
+A comprehensive quality governance platform built for healthcare. Manages clinical quality indicators, incident tracking, audit workflows, corrective actions, and compliance reporting — giving quality teams a unified system across departments and sites.
+
+**Stack:** C# · .NET
+
+---
+
 ### [RoomManager](https://github.com/bewayo2/RoomManager) `TypeScript` `Private`
 > Full-stack healthcare clinic inventory and procedure tracking system.
 
@@ -108,12 +118,28 @@ Web tool that converts text descriptions into swimlane or process flow diagrams,
 
 ---
 
+### [SJH Org Chart](https://github.com/bewayo2/SJHOrgchart) `HTML` `Private`
+> Interactive organisational chart for St John of God Hospital.
+
+Web-based org chart tool for visualising department and reporting structures within SJH. Built for internal use by HR and operations teams.
+
+**Stack:** HTML · JavaScript
+
+---
+
 ### [AI OCR Sorter](https://github.com/bewayo2/AIOCRSorter) `Python` `Public`
 > Automatically sorts and classifies scanned documents using AI and OCR.
 
 Uses OCR and AI classification to sort large batches of scanned files into categories without manual review.
 
 **Stack:** Python · OCR · AI Classification
+
+---
+
+### [Inventory Matching](https://github.com/bewayo2/Inventorymatching) `Public`
+> Matches and reconciles inventory items across systems or locations.
+
+Tool for cross-referencing inventory records to identify duplicates, discrepancies, and unmatched items — supporting stock audits and data migration workflows.
 
 ---
 
@@ -148,6 +174,15 @@ Automates early-stage candidate evaluation using AI to match resumes against rol
 
 ---
 
+### [arvohire](https://github.com/bewayo2/arvohire) `Python` `Private`
+> Culture-based recruitment platform.
+
+A hiring platform that goes beyond skills matching to evaluate candidate-culture fit. Structures the recruitment process around organisational values, team dynamics, and behavioural indicators — helping teams hire for long-term retention as much as capability.
+
+**Stack:** Python
+
+---
+
 ### [Audio Transcription App](https://github.com/bewayo2/audiotransriptionapp) `Python` `Public`
 > Lightweight utility to convert audio files to text.
 
@@ -163,6 +198,24 @@ Simple, focused tool for transcribing audio recordings using OpenAI Whisper. Des
 Browser-based tool for researchers to pull structured citation data from paper links and DOIs.
 
 **Stack:** HTML · JavaScript
+
+---
+
+### [BrainKick](https://github.com/bewayo2/Brainkick) `Private`
+> Chat-to-document and chat-to-PDF platform.
+
+Conversational interface that lets users generate, edit, and export structured documents and PDFs through natural language chat. Built as a multi-service architecture across five repositories covering the core app, frontend, backend API, registration service, and live collaboration layer.
+
+**Repositories:** [Core](https://github.com/bewayo2/Brainkick) · [Frontend](https://github.com/bewayo2/BrainkickFE) · [Backend](https://github.com/bewayo2/Brainkick-BE) · [Registration](https://github.com/bewayo2/BrainKick-Reg) · [Live](https://github.com/bewayo2/BrainKick-Live)
+
+---
+
+### [Utility Projects](https://github.com/bewayo2/Utilityprojects) `Python` `Private`
+> Collection of reusable Python utility scripts and automation tools.
+
+A workspace for smaller scripts and utilities that support other projects — data processing helpers, file manipulation tools, and automation snippets.
+
+**Stack:** Python
 
 ---
 
@@ -182,6 +235,13 @@ Transcribes videos using **OpenAI Whisper**, then uses **GPT-4.1** to generate p
 Outputs to Word documents.
 
 **Stack:** Python · OpenAI GPT-4.1 · Whisper
+
+---
+
+### [Shorts Generator](https://github.com/bewayo2/Shortsgenerator) `Private`
+> Generates viral short-form clips from long-form video content.
+
+Analyses long-form video to identify the highest-engagement moments and automatically extracts them as short-form clips optimised for platforms like YouTube Shorts, TikTok, and Instagram Reels. Separate pipeline from Caption Generator — focused on clip extraction rather than text output.
 
 ---
 
@@ -209,6 +269,15 @@ Companion to the Keyword Generator — takes keyword research and produces struc
 Converts Word documents into standalone HTML mind map files using an LLM to extract structure. No server required — the output is a single portable HTML file.
 
 **Stack:** Python · OpenAI LLM · Cytoscape.js
+
+---
+
+### [Articles & Blogs](https://github.com/bewayo2/ArticlesandBlogs) `Python` `Private`
+> Automated article and blog content generation pipeline.
+
+Python pipeline for drafting, structuring, and publishing long-form written content. Supports multi-topic batch generation with configurable tone, length, and SEO settings.
+
+**Stack:** Python · OpenAI GPT
 
 ---
 
@@ -240,6 +309,15 @@ A customised fork of [Aide](https://github.com/codestoryai/aide), an open-source
 Interactive tool guiding healthcare practices through structured criteria to identify the most suitable EMR platform for their needs.
 
 **Stack:** JavaScript
+
+---
+
+### [Local Paradyme](https://github.com/bewayo2/Localparadyme) `TypeScript` `Private`
+> Self-hosted local deployment build of Paradyme EMR.
+
+A locally deployable configuration of the Paradyme EMR system, optimised for clinics running on-premises infrastructure rather than cloud-hosted environments.
+
+**Stack:** TypeScript
 
 ---
 
@@ -287,6 +365,15 @@ Users set long-horizon goals (10/5/3/1 years) across life buckets, then cascade 
 
 ---
 
+### [PG Annie (Early Prototype)](https://github.com/bewayo2/PG-Annie) `HTML` `Private`
+> Original HTML prototype of the PG Annie goal planning tool.
+
+The initial proof-of-concept for the PG Annie goal planner, built in plain HTML/JS before the full TypeScript rewrite. Established the core goal-cascading model and UX flow.
+
+**Stack:** HTML · JavaScript
+
+---
+
 ## Data & Research
 
 Visualisation and analysis tools for clinical and research data.
@@ -309,14 +396,43 @@ Web app that sends text to **GPT-4**, receives structured process tables, and re
 
 ---
 
+### [SciWrap](https://github.com/bewayo2/SciWrap) `Python` `Private`
+> Delivers personalised journal article summaries based on user-defined keywords.
+
+Users submit keywords or topic areas and SciWrap retrieves relevant journal articles, summarises them using an LLM, and delivers digestible research briefings. Designed to keep clinicians and researchers current without the burden of manual literature review.
+
+**Stack:** Python · LLM · Academic APIs
+
+---
+
+### [Data Analysis](https://github.com/bewayo2/Data-Analysis) `Public`
+> Collection of data analysis notebooks and scripts.
+
+A repository of analytical work including exploratory data analysis, visualisations, and research scripts spanning clinical and operational datasets.
+
+---
+
+## Security & Compliance
+
+Tools for organisational security assessment and compliance readiness.
+
+### [27Readiness](https://github.com/bewayo2/27Readiness) `JavaScript` `Public`
+> Cybersecurity readiness assessment tool for organisations.
+
+Guides organisations through a structured self-assessment of their cybersecurity posture based on ISO 27001 / NIST-aligned controls. Produces a readiness score, gap analysis, and prioritised remediation roadmap — helping teams understand where they stand before a formal audit or certification.
+
+**Stack:** JavaScript
+
+---
+
 ## Stats
 
 | Metric | Count |
 |--------|-------|
-| Total repositories | 43 |
-| Public | 18 |
-| Private | 25 |
-| Primary languages | Python (19), TypeScript (6), JavaScript (8), HTML (6), C# (1), PHP (1) |
+| Total repositories | 44 |
+| Public | 20 |
+| Private | 24 |
+| Primary languages | Python (19), TypeScript (7), JavaScript (9), HTML (7), C# (1), PHP (1) |
 | Healthcare-focused | ~28 |
 
 ---

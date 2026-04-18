@@ -71,3 +71,28 @@ AI-powered tool for generating swimlane and process flow diagrams from text desc
 Automatically classifies and sorts large batches of scanned documents using OCR and AI, eliminating manual document routing.
 
 **Stack:** Python · OCR · AI Classification
+
+---
+
+## SentinelQG
+**Repo:** [bewayo2/SentinelQG](https://github.com/bewayo2/SentinelQG) · `C#` · `Private`
+
+Enterprise quality management solution for healthcare organisations. Manages clinical quality indicators, incident tracking, audit workflows, corrective actions, and compliance reporting — giving quality teams a unified governance system across departments and sites.
+
+**Stack:** C# · .NET
+
+---
+
+## SJH Org Chart
+**Repo:** [bewayo2/SJHOrgchart](https://github.com/bewayo2/SJHOrgchart) · `HTML` · `Private`
+
+Interactive organisational chart for St John of God Hospital. Web-based visualisation of department and reporting structures, built for internal use by HR and operations teams.
+
+**Stack:** HTML · JavaScript
+
+---
+
+## Inventory Matching
+**Repo:** [bewayo2/Inventorymatching](https://github.com/bewayo2/Inventorymatching) · `Public`
+
+Cross-references inventory records to identify duplicates, discrepancies, and unmatched items — supporting stock audits and data migration workflows.

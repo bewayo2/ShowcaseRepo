@@ -69,3 +69,19 @@ Companion to the Keyword Generator. Takes keyword research input and produces st
 Converts Word training documents into standalone interactive Cytoscape.js mind map HTML files using an LLM to extract and structure the content. Output is a single portable HTML file — no server needed.
 
 **Stack:** Python · OpenAI LLM · Cytoscape.js
+
+---
+
+## Shorts Generator
+**Repo:** [bewayo2/Shortsgenerator](https://github.com/bewayo2/Shortsgenerator) · `Private`
+
+Generates viral short-form clips from long-form video content. Analyses source videos to identify the highest-engagement moments and automatically extracts them as clips optimised for YouTube Shorts, TikTok, and Instagram Reels. A separate pipeline from Caption Generator — focused on clip extraction rather than text output.
+
+---
+
+## Articles & Blogs
+**Repo:** [bewayo2/ArticlesandBlogs](https://github.com/bewayo2/ArticlesandBlogs) · `Python` · `Private`
+
+Automated pipeline for drafting, structuring, and publishing long-form written content. Supports multi-topic batch generation with configurable tone, length, and SEO settings.
+
+**Stack:** Python · OpenAI GPT
