@@ -10,12 +10,12 @@ A portfolio of software projects built by [@bewayo2](https://github.com/bewayo2)
 |---|----------|----------|
 | 1 | [Healthcare AI](#-healthcare-ai) | WoundCareAI, ScanAuditor, BHS Virtual Health Assistant, Sepsis Predictor, BHS Discharge Summary Generator |
 | 2 | [Healthcare Operations](#-healthcare-operations) | RoomManager, Scan Progress Tracker, SJH Equipment Commissioning, SJH Swimlane Generator, AI OCR Sorter, SentinelQG, SJH Org Chart, Inventory Matching |
-| 3 | [AI Productivity Tools](#-ai-productivity-tools) | MasterLister, Strategic Blueprint GPTs, AI Hiring Tool, arvohire, Audio Transcription App, Ref Extractor, BrainKick, Utility Projects |
-| 4 | [Marketing & Content](#-marketing--content) | Caption Generator, Shorts Generator, Keyword Generator, Blog Outline & SEO Generator, Training Mindmaps, Articles & Blogs |
+| 3 | [AI Productivity Tools](#-ai-productivity-tools) | MasterLister, Strategic Blueprint GPTs, AI Hiring Tool, arvohire, ContactBuilder, Audio Transcription App, Ref Extractor, BrainKick, Utility Projects |
+| 4 | [Marketing & Content](#-marketing--content) | Media Content Generator, Video Editing, SJH Mockup Builder, Shorts Generator, Keyword Generator, Blog Outline & SEO Generator, Training Mindmaps, Articles & Blogs |
 | 5 | [EMR & Practice Management](#-emr--practice-management) | Paradyme, Paradyme Aide, EMR Select, Local Paradyme |
 | 6 | [Revenue Cycle Management](#-revenue-cycle-management) | Settle |
-| 7 | [Goal & Project Management](#-goal--project-management) | PG Annie |
-| 8 | [Data & Research](#-data--research) | AUROC Demo, BHS Flow Map Generator, Ref Extractor, SciWrap, Data Analysis |
+| 7 | [Goal & Project Management](#-goal--project-management) | PG Annie, Personal Planner |
+| 8 | [Data & Research](#-data--research) | AUROC Demo, BHS Flow Map Generator, Ref Extractor, SciWrap, Academic Writing, Data Analysis |
 | 9 | [Security & Compliance](#-security--compliance) | 27Readiness |
 
 ---
@@ -183,6 +183,15 @@ A hiring platform that goes beyond skills matching to evaluate candidate-culture
 
 ---
 
+### [ContactBuilder](https://github.com/bewayo2/ContactBuilder) `Python` `Private`
+> Lead research and outreach automation for healthcare opportunities.
+
+Pipeline for discovering healthcare organisations and decision-makers from project triggers, job postings, and public-sector buying signals. Supports Exa discovery, Hunter enrichment, GPT contact playbooks, CRM-ready exports, LinkedIn URL exports, and outreach document generation.
+
+**Stack:** Python · Exa · OpenAI GPT · Hunter · python-docx
+
+---
+
 ### [Audio Transcription App](https://github.com/bewayo2/audiotransriptionapp) `Python` `Public`
 > Lightweight utility to convert audio files to text.
 
@@ -223,7 +232,7 @@ A workspace for smaller scripts and utilities that support other projects — da
 
 AI tools for generating, optimising, and repurposing content at scale.
 
-### [Caption Generator](https://github.com/bewayo2/CaptionGenerator) `Python` `Private`
+### [Media Content Generator](https://github.com/bewayo2/MediaContentGenerator) `Python` `Private`
 > Automated social media and long-form content from video/audio files.
 
 Transcribes videos using **OpenAI Whisper**, then uses **GPT-4.1** to generate platform-specific content based on duration:
@@ -238,10 +247,28 @@ Outputs to Word documents.
 
 ---
 
+### [Video Editing](https://github.com/bewayo2/VideoEditing) `Python` `Private`
+> Agentic video editing toolkit for turning raw footage into polished videos.
+
+Customised video-use workflow that gives an AI agent transcript-first editing tools, timeline inspection, subtitle rendering, cut verification, and animation overlay generation through Manim, Remotion, and HyperFrames-style skills.
+
+**Stack:** Python · FFmpeg · Remotion · Manim · OpenAI Whisper
+
+---
+
+### [SJH Mockup Builder](https://github.com/bewayo2/SJHMockupBuilder) `JavaScript` `Private`
+> Browser-based mockup builder for SJH website concepts.
+
+Interactive page mockup canvas with editable sections, layers, properties, drag-and-drop controls, JSON project import/export, and PNG export for individual pages.
+
+**Stack:** HTML · CSS · JavaScript · Node.js
+
+---
+
 ### [Shorts Generator](https://github.com/bewayo2/Shortsgenerator) `Private`
 > Generates viral short-form clips from long-form video content.
 
-Analyses long-form video to identify the highest-engagement moments and automatically extracts them as short-form clips optimised for platforms like YouTube Shorts, TikTok, and Instagram Reels. Separate pipeline from Caption Generator — focused on clip extraction rather than text output.
+Analyses long-form video to identify the highest-engagement moments and automatically extracts them as short-form clips optimised for platforms like YouTube Shorts, TikTok, and Instagram Reels. Separate pipeline from Media Content Generator — focused on clip extraction rather than text output.
 
 ---
 
@@ -374,6 +401,15 @@ The initial proof-of-concept for the PG Annie goal planner, built in plain HTML/
 
 ---
 
+### [Personal Planner](https://github.com/bewayo2/PersonalPlanner) `Python` `Private`
+> Personal planning automation across ClickUp, Google Drive, and Google Calendar.
+
+Python toolkit for weekly planning, ClickUp task reporting and updates, Google Drive search/linking, and Google Calendar planning windows. Organised as sibling modules for ClickUp, Drive, and Calendar helpers.
+
+**Stack:** Python · ClickUp API · Google Drive API · Google Calendar API
+
+---
+
 ## Data & Research
 
 Visualisation and analysis tools for clinical and research data.
@@ -405,6 +441,15 @@ Users submit keywords or topic areas and SciWrap retrieves relevant journal arti
 
 ---
 
+### [Academic Writing](https://github.com/bewayo2/AcademicWriting) `Python` `Private`
+> Literature review automation tools for Caribbean healthcare and AI research.
+
+Multi-step research pipeline for extracting source links, downloading and preflighting PDFs, converting papers to text, running OpenAI-assisted multi-pass paper extraction, and building master synthesis tables for academic writing.
+
+**Stack:** Python · OpenAI GPT · Exa · pypdf · python-docx
+
+---
+
 ### [Data Analysis](https://github.com/bewayo2/Data-Analysis) `Public`
 > Collection of data analysis notebooks and scripts.
 
@@ -429,12 +474,12 @@ Guides organisations through a structured self-assessment of their cybersecurity
 
 | Metric | Count |
 |--------|-------|
-| Total repositories | 44 |
+| Total repositories | 51 |
 | Public | 20 |
-| Private | 24 |
-| Primary languages | Python (19), TypeScript (7), JavaScript (9), HTML (7), C# (1), PHP (1) |
-| Healthcare-focused | ~28 |
+| Private | 31 |
+| Primary languages | Python (22), JavaScript (8), HTML (6), TypeScript (4), CSS (2), PHP (1), C# (1) |
+| Healthcare-focused | ~31 |
 
 ---
 
-*Last updated: April 2026*
+*Last updated: July 2026*
