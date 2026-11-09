@@ -1,54 +1,33 @@
-# EMR & Practice Management
+# EMR & Clinical Integration Projects
 
-Electronic Medical Record systems and clinical tooling.
-
----
+Electronic records foundations, selection support, and experimental system integration.
 
 ## Paradyme
-**Repo:** [bewayo2/Paradyme](https://github.com/bewayo2/Paradyme) · `PHP` · `Public`
+**Repository:** [bewayo2/Paradyme](https://github.com/bewayo2/Paradyme) · **Status:** Open-source fork; public
 
-A customised fork of [OpenEMR](https://open-emr.org) — the world's most widely deployed open-source electronic health records and practice management platform.
+Fork of OpenEMR. EHR, appointments and billing functions are inherited from the upstream application. The repository's README is largely upstream material; specific original improvements, deployments and operational usage require additional evidence.
 
-### What it includes
-- Fully integrated electronic health records (EHR)
-- Medical practice management and scheduling
-- Electronic billing
-- Internationalization support
-- Active open-source community and professional support ecosystem
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Backend | PHP |
-| Database | MySQL |
-| Base | OpenEMR (open source) |
-
----
-
-## Paradyme Aide
-**Repo:** [bewayo2/Paradyme-aide](https://github.com/bewayo2/Paradyme-aide) · `TypeScript` · `Public`
-
-A fork of [Aide](https://github.com/codestoryai/aide) — an open-source, AI-native code editor built on VS Code with tight integration with agentic AI systems.
-
-### Features inherited from Aide
-- **Combined chat + edit flow**: Brainstorm in chat with file references, then jump directly into multi-file edits
-- **Proactive agents**: AI iterates on linter errors using Language Server data, go-to-definitions, and go-to-references
-- **Inline editing widget**: Press Ctrl/Cmd+K anywhere to issue AI instructions inline
-- **Intelligent code completion**: Context-aware suggestions powered by state-of-the-art models
-- Top ranking on SWE-bench-lite agentic framework
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Base | VS Code fork |
-| AI Integration | Agentic framework (SWE-bench-lite) |
-| Language | TypeScript |
+**Technology:** PHP, MySQL, OpenEMR
 
 ---
 
 ## EMR Select
-**Repo:** [bewayo2/EMRSelect](https://github.com/bewayo2/EMRSelect) · `JavaScript` · `Public`
+**Repository:** [bewayo2/EMRSelect](https://github.com/bewayo2/EMRSelect) · **Status:** Decision-support web app; public
 
-Interactive decision tool that guides healthcare practices through structured evaluation criteria to identify the most suitable EMR platform for their specific needs.
+Interactive web tool to help healthcare practices compare EMR options using structured evaluation criteria. It does not procure, deploy or certify an EMR.
 
-**Stack:** JavaScript
+**Technology:** HTML, JavaScript
+
+---
+
+## Local Paradyme / AgentCare MCP
+**Repository:** [bewayo2/Localparadyme](https://github.com/bewayo2/Localparadyme) · **Status:** Experiment; private
+
+The actual package is named `agentcare-mcp` and contains MCP/Express server and connector code, alongside a React/Vite starter UI. Current source does not support describing it as a completed local Paradyme EMR deployment.
+
+**Technology:** TypeScript, MCP SDK, Express, React
+
+
+---
+
+*Source-checked 9 November 2026. Source review does not constitute production, compliance or outcome validation.*
