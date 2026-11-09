@@ -1,6 +1,8 @@
 # bewayo2 — Project Showcase
 
-A portfolio of software projects built by [@bewayo2](https://github.com/bewayo2), spanning AI-powered healthcare tools, clinical operations systems, productivity automation, and EMR platforms.
+A source-checked portfolio of software work maintained by [@bewayo2](https://github.com/bewayo2), spanning healthcare AI, clinical operations, digital systems, research, and business applications. Entries describe repositories and their documented implementation. Inclusion does not imply clinical validation, production deployment, regulatory certification, or exclusive authorship of upstream open-source code.
+
+**Inventory verified:** 9 November 2026. Project labels distinguish applications, prototypes, adaptations, and placeholders. Private repository links require authorized GitHub access.
 
 ---
 
@@ -8,12 +10,12 @@ A portfolio of software projects built by [@bewayo2](https://github.com/bewayo2)
 
 | # | Category | Projects |
 |---|----------|----------|
-| 1 | [Healthcare AI](#-healthcare-ai) | WoundCareAI, ScanAuditor, BHS Virtual Health Assistant, Sepsis Predictor, BHS Discharge Summary Generator |
-| 2 | [Healthcare Operations](#-healthcare-operations) | RoomManager, Scan Progress Tracker, SJH Equipment Commissioning, SJH Swimlane Generator, AI OCR Sorter, SentinelQG, SJH Org Chart, Inventory Matching |
-| 3 | [AI Productivity Tools](#-ai-productivity-tools) | MasterLister, Strategic Blueprint GPTs, AI Hiring Tool, arvohire, ContactBuilder, Audio Transcription App, Ref Extractor, BrainKick, Utility Projects |
-| 4 | [Marketing & Content](#-marketing--content) | Media Content Generator, Video Editing, SJH Mockup Builder, Shorts Generator, Keyword Generator, Blog Outline & SEO Generator, Training Mindmaps, Articles & Blogs |
-| 5 | [EMR & Practice Management](#-emr--practice-management) | Paradyme, Paradyme Aide, EMR Select, Local Paradyme |
-| 6 | [Revenue Cycle Management](#-revenue-cycle-management) | Settle |
+| 1 | [Healthcare AI](#-healthcare-ai) | WoundCareAI, ScanAuditor, BHS Virtual Health Assistant, Sepsis Predictor, BHS Discharge Summary Generator, MediScripts (placeholder) |
+| 2 | [Healthcare Operations](#-healthcare-operations) | RoomManager, Scan Progress Tracker, SJH Equipment Commissioning, SJH Swimlane Generator, AI OCR Sorter, SentinelQG, SJH Org Chart (two repositories), Inventory Matching (empty) |
+| 3 | [AI Productivity Tools](#-ai-productivity-tools) | MasterLister, Strategic Blueprint GPTs, AI Hiring Tool, arvohire, ContactBuilder, Audio Transcription, Ref Extractor, BrainKick, Utility Projects, BHS Knowledge Base Sync, Paradyme Aide |
+| 4 | [Marketing & Content](#-marketing--content) | Media Content Generator, Video Editing, SJH Mockup Builder, Shorts Generator, Keyword Generator, WordPress Manager, Training Mindmaps, Articles & Blogs, BHS Writer, SJH Content & Brand Creator |
+| 5 | [EMR & Practice Management](#-emr--practice-management) | Paradyme (OpenEMR fork), EMR Select, Local Paradyme (AgentCare MCP experiment) |
+| 6 | [Finance & Revenue Operations](#-finance--revenue-operations) | Settle, KinCFO (licensing server and demo) |
 | 7 | [Goal & Project Management](#-goal--project-management) | PG Annie, Personal Planner |
 | 8 | [Data & Research](#-data--research) | AUROC Demo, BHS Flow Map Generator, Ref Extractor, SciWrap, Academic Writing, Data Analysis |
 | 9 | [Security & Compliance](#-security--compliance) | 27Readiness |
@@ -25,50 +27,54 @@ A portfolio of software projects built by [@bewayo2](https://github.com/bewayo2)
 Tools that apply AI/ML directly to clinical workflows, diagnostics, and patient care.
 
 ### [WoundCareAI](https://github.com/bewayo2/WoundCareAI) `Python` `Private`
-> AI-powered wound analysis for healthcare professionals and remote areas.
+> Multimodal wound-assessment research prototype for the Google Gemma 3n Impact Challenge.
 
-Built for the **Google Gemma 3n Impact Challenge**. A mobile-first web app that uses Google's Gemma 3n multimodal AI to capture wound photos and voice notes, then produces a structured assessment across 15 medical parameters (size, depth, infection signs, exudate, etc.).
+Mobile-oriented Streamlit application for recording wound photographs and notes, generating a structured multi-parameter AI assessment, and exporting reports. The README describes local/offline operation after setup; actual mobile performance and clinical accuracy were not independently verified. Its medical disclaimer requires professional judgment and warns against using the application as a replacement for clinical assessment.
 
-**Stack:** Python · Google Gemma 3n · Mobile-first Web
+**Stack:** Python · Streamlit · Google Gemma 3n · Transformers/PyTorch
 
 ---
 
 ### [ScanAuditor](https://github.com/bewayo2/scanauditor) `JavaScript` `Public`
-> Comprehensive AI analysis of scanned handwritten medical records.
+> Desktop quality-assurance workspace for scanned medical-record PDFs.
 
-Uses **PaddleOCR** for handwriting extraction and **Gemma 3n 4b** for text analysis. Detects multi-patient files, date mismatches, and data integrity issues across entire documents. Designed for auditing legacy paper-based clinical records.
+The current pipeline converts PDF pages to images and, by default, uses local Ollama models **qwen3-vl:8b-instruct** for OCR/visual checks and **qwen3:14b** for identifier and date extraction. Deterministic checks flag unreadable pages, possible duplicate pages, patient-identity conflicts, missing coverage and inconsistent dates. Supports resumable folder audits, a local SQLite review queue, audit evidence, and optional hospital-authorized cloud inference. It **does not** establish source-paper completeness or authorize disposal of paper records.
 
-**Stack:** JavaScript · PaddleOCR · Google Gemma 3n
+**Stack:** Electron/JavaScript · Python PDF conversion · Ollama/Qwen3 · SQLite · Optional OpenAI
 
 ---
 
 ### [BHS Virtual Health Assistant](https://github.com/bewayo2/BHSVirtualHealthAssistant) `Python` `Public`
-> Conversational AI chatbot demo for Bright Health Solutions.
+> Jamaica-focused health information chatbot prototype.
 
-A virtual health assistant chatbot for patient-facing interactions, built as a demonstration for BHS.
+Contains a FastAPI backend and web frontend for a virtual health-information assistant. The backend documents the **JAMCare** concept, uses OpenAI GPT-4o-mini, and includes guidance on health information and escalation. It is an experimental demonstration, not a clinically validated or regulator-approved patient-care service.
 
-**Stack:** Python
+**Stack:** Python · FastAPI · OpenAI API · JavaScript frontend
 
 ---
 
-### [BHS Discharge Summary Generator](https://github.com/bewayo2/BHSDischargeSummaryGenerator) `HTML` `Public`
-> Automated clinical discharge summary generation tool.
+### [BHS Discharge Summary Generator](https://github.com/bewayo2/BHSDischargeSummaryGenerator) `JavaScript` `Public`
+> Prototype for drafting structured discharge summaries from supplied clinical notes.
 
-Web-based tool for generating structured discharge summaries for BHS clinical staff.
+Browser UI backed by an Express server that calls an OpenAI model to produce summarised text. Human clinical review remains necessary before use in a patient record. The source uses a legacy GPT-4 preview model identifier, so operational compatibility needs verification.
 
-**Stack:** HTML · JavaScript
+**Stack:** HTML · JavaScript · Node.js/Express · OpenAI API
 
 ---
 
 ### [Sepsis Predictor](https://github.com/bewayo2/Sepsispredictor) `Python` `Public`
-> Machine learning model for early sepsis risk prediction.
+> Educational sepsis risk modelling and sensitivity dashboard.
 
-Predictive model using clinical data to identify patients at risk of sepsis, enabling earlier intervention.
+Contains a clinical dataset, a saved machine-learning model, and a Streamlit dashboard examining lactate, temperature, and mean arterial pressure. No prospective clinical validation or approval for diagnosis/treatment was verified. Present as a research or teaching demonstration.
 
-**Stack:** Python · Machine Learning
+**Stack:** Python · Streamlit · scikit-learn · joblib
 
 ---
 
+### [MediScripts](https://github.com/bewayo2/MediScripts) `Private`
+> **Placeholder repository.** Only a minimal README containing the project name was found. No features or implementation are claimed.
+
+---
 ## Healthcare Operations
 
 Systems for managing clinical workflows, inventory, equipment, and process documentation.
@@ -83,11 +89,11 @@ A comprehensive quality governance platform built for healthcare. Manages clinic
 ---
 
 ### [RoomManager](https://github.com/bewayo2/RoomManager) `TypeScript` `Private`
-> Full-stack healthcare clinic inventory and procedure tracking system.
+> Healthcare procedure and inventory-management application under development.
 
-Manages medical supplies with **FEFO (First-Expiry-First-Out)** stock rotation, purchase orders, procedure usage logging, and AI-assisted label scanning for batch/expiry extraction. Includes low stock alerts, variance analysis, and full audit trails.
+Includes item master data, FEFO inventory rotation, purchasing and receiving, procedure consumption logging, stock adjustments, and reporting workflows. **AI-assisted label scanning and invoice matching are listed as planned features**, rather than confirmed completed capabilities.
 
-**Stack:** Node.js · TypeScript · Express · React · Firebase Firestore · Zod
+**Stack:** Node.js · TypeScript · Express · React · Firestore · Zod
 
 ---
 
@@ -101,11 +107,11 @@ Flask app that recursively analyses PDFs in a folder tree, extracts metadata, an
 ---
 
 ### [SJH Equipment Commissioning](https://github.com/bewayo2/SJHEquipmentCommissioning) `JavaScript` `Private`
-> Equipment commissioning tracking app for St John of God Hospital.
+> Equipment and room-commissioning workflow application for St Jude Hospital.
 
-React + Vite application for managing and tracking the commissioning status of hospital equipment.
+React/Vite application with room checklists, biomedical equipment views and reporting, supplier register, item search, and bill-of-quantities/reference views. Repository code documents these modules; institutional adoption or deployment was not verified.
 
-**Stack:** React · Vite · JavaScript
+**Stack:** React · Vite · JavaScript · Firebase
 
 ---
 
@@ -128,21 +134,29 @@ Web-based org chart tool for visualising department and reporting structures wit
 ---
 
 ### [AI OCR Sorter](https://github.com/bewayo2/AIOCRSorter) `Python` `Public`
-> Automatically sorts and classifies scanned documents using AI and OCR.
+> Local batch-processing script for scanned PDF medical records.
 
-Uses OCR and AI classification to sort large batches of scanned files into categories without manual review.
+The code extracts hospital numbers from PDFs using document/image processing and AI components, then supports page bookmarking, splitting, and regrouping by identifier. It should not be described as an independently validated general-purpose classification platform.
 
-**Stack:** Python · OCR · AI Classification
+**Stack:** Python · PyMuPDF · PDF/image tools · Qwen2-VL components
 
 ---
 
 ### [Inventory Matching](https://github.com/bewayo2/Inventorymatching) `Public`
-> Matches and reconciles inventory items across systems or locations.
+> **Empty repository / placeholder.**
 
-Tool for cross-referencing inventory records to identify duplicates, discrepancies, and unmatched items — supporting stock audits and data migration workflows.
+The repository currently has no files on its default branch. Matching, reconciliation, or migration functions cannot be verified from code. It is listed for inventory completeness and **not counted as a working application**.
 
 ---
 
+### [SJH Organisation Chart (full-stack)](https://github.com/bewayo2/sjh-org-chart) `TypeScript` `Private`
+> Separate, full-stack hospital organisational-chart project.
+
+Includes a client, a server with Prisma database tooling, and organisation-chart image generation scripts. This is distinct from the earlier single-file [SJHOrgchart](https://github.com/bewayo2/SJHOrgchart).
+
+**Stack:** TypeScript · Node.js · Prisma · Web client
+
+---
 ## AI Productivity Tools
 
 Automation tools that leverage LLMs to accelerate knowledge work.
@@ -211,11 +225,11 @@ Browser-based tool for researchers to pull structured citation data from paper l
 ---
 
 ### [BrainKick](https://github.com/bewayo2/Brainkick) `Private`
-> Chat-to-document and chat-to-PDF platform.
+> Multi-repository document workflow project with uneven implementation status.
 
-Conversational interface that lets users generate, edit, and export structured documents and PDFs through natural language chat. Built as a multi-service architecture across five repositories covering the core app, frontend, backend API, registration service, and live collaboration layer.
+[Brainkick-BE](https://github.com/bewayo2/Brainkick-BE) contains Python application/backend code; [BrainKick-Live](https://github.com/bewayo2/BrainKick-Live) contains a larger web application codebase. The [core](https://github.com/bewayo2/Brainkick), [frontend](https://github.com/bewayo2/BrainkickFE), and [registration](https://github.com/bewayo2/BrainKick-Reg) repositories are **currently empty**. The original portfolio's end-to-end chat-to-document/PDF product claim is a project aim, not a verified integrated capability.
 
-**Repositories:** [Core](https://github.com/bewayo2/Brainkick) · [Frontend](https://github.com/bewayo2/BrainkickFE) · [Backend](https://github.com/bewayo2/Brainkick-BE) · [Registration](https://github.com/bewayo2/BrainKick-Reg) · [Live](https://github.com/bewayo2/BrainKick-Live)
+**Repositories:** [Backend](https://github.com/bewayo2/Brainkick-BE) · [Live](https://github.com/bewayo2/BrainKick-Live) · [Core placeholder](https://github.com/bewayo2/Brainkick) · [Frontend placeholder](https://github.com/bewayo2/BrainkickFE) · [Registration placeholder](https://github.com/bewayo2/BrainKick-Reg)
 
 ---
 
@@ -228,6 +242,23 @@ A workspace for smaller scripts and utilities that support other projects — da
 
 ---
 
+### [BHS Knowledge Base Sync](https://github.com/bewayo2/BHSKnowledgebasesync) `Python` `Private`
+> Knowledge-management automation connecting a curated Google Drive library with an OpenAI vector store.
+
+Uses configured folder inclusion/exclusion rules, exports eligible source files, maintains a sync register, updates changed vector-store entries, and supports GitHub Actions runs. Designed to avoid raw intake, archived and human-review material.
+
+**Stack:** Python · Google Drive API · OpenAI Files/vector stores · GitHub Actions
+
+---
+
+### [Paradyme Aide](https://github.com/bewayo2/Paradyme-aide) `TypeScript` `Public`
+> Fork of the AI-enabled Aide/VS Code editor, classified here as development tooling rather than clinical records software.
+
+Code and features from the upstream Aide project are acknowledged. No independently verified original editor feature claims are made.
+
+**Stack:** TypeScript · VS Code/Aide fork
+
+---
 ## Marketing & Content
 
 AI tools for generating, optimising, and repurposing content at scale.
@@ -248,11 +279,11 @@ Outputs to Word documents.
 ---
 
 ### [Video Editing](https://github.com/bewayo2/VideoEditing) `Python` `Private`
-> Agentic video editing toolkit for turning raw footage into polished videos.
+> Adaptation of the open-source `video-use` agentic video-editing toolkit for BHS content production.
 
-Customised video-use workflow that gives an AI agent transcript-first editing tools, timeline inspection, subtitle rendering, cut verification, and animation overlay generation through Manim, Remotion, and HyperFrames-style skills.
+The upstream repository's code and MIT license are attributed to Browser Use. This working copy includes BHS-specific caption, brand, podcast-audiogram, and editorial overlay guidance, as well as FFmpeg, Manim, and Remotion-based workflows. Describe this as **customization and integration**, not sole authorship of the original tool.
 
-**Stack:** Python · FFmpeg · Remotion · Manim · OpenAI Whisper
+**Stack:** Python · FFmpeg · Remotion · Manim · Claude Code workflows
 
 ---
 
@@ -281,12 +312,12 @@ Streamlit app that pulls keyword ideas from **Google Ads Keyword Planner**, then
 
 ---
 
-### [Blog Outline & SEO Generator](https://github.com/bewayo2/BlogOutlineandSEOGenerator) `Python` `Private`
-> Generates blog outlines with full SEO metadata using keyword data.
+### [WordPress Manager](https://github.com/bewayo2/wordpressmanager) `Python` `Private`
+> Blog content, SEO and WordPress publishing workflow tools.
 
-Companion to the Keyword Generator — takes keyword research and produces structured blog outlines with SEO-optimised metadata.
+The repository includes a command-line keyword-and-outline generator using Google Ads data and GPT, a legacy Streamlit app, and an ArticlesandBlogs subdirectory. It is the accessible replacement for the showcase's broken `BlogOutlineandSEOGenerator` repository link.
 
-**Stack:** Python · Streamlit · OpenAI GPT
+**Stack:** Python · Google Ads API · OpenAI API · WordPress tooling
 
 ---
 
@@ -308,27 +339,36 @@ Python pipeline for drafting, structuring, and publishing long-form written cont
 
 ---
 
+### [BHS Writer](https://github.com/bewayo2/BHSWriter) `Python` `Private`
+> BHS long-form and search-oriented article drafting pipeline.
+
+Converts supplied outlines into two article drafts using an Anthropic Claude model, BHS writing guidance, and SEO checks. The repository overlaps in file structure with ArticlesandBlogs; they are counted as separate repositories, not independent proof of unrelated products.
+
+**Stack:** Python · Anthropic API · Word/Markdown tooling
+
+---
+
+### [SJH Content & Brand Creator](https://github.com/bewayo2/SJH-Content-Brand-Creator) `Public`
+> Deployable AI skill package for St Jude Hospital communication and brand-governance workflows.
+
+Includes instructions, playbooks, reference files, templates and optional linting scripts. Its rules require current approved brand sources and human institutional approvals, which the skill does not grant.
+
+**Stack:** Markdown skill files · Python/utilities
+
+---
 ## EMR & Practice Management
 
 Electronic Medical Record systems and tooling.
 
 ### [Paradyme](https://github.com/bewayo2/Paradyme) `PHP` `Public`
-> Fork of OpenEMR — open source electronic health records platform.
+> Fork of the open-source OpenEMR electronic records and practice-management platform.
 
-A customised fork of [OpenEMR](https://open-emr.org), the leading open-source EHR and practice management system. Features integrated health records, scheduling, electronic billing, and internationalization.
+The repository contains an OpenEMR-derived codebase, including records, scheduling and billing functionality inherited from the upstream project. The available README largely reproduces upstream OpenEMR documentation. Specific original modifications, completed implementations and deployments require separate evidence.
 
-**Stack:** PHP · MySQL · OpenEMR
-
----
-
-### [Paradyme Aide](https://github.com/bewayo2/Paradyme-aide) `TypeScript` `Public`
-> Fork of Aide — AI-native code editor based on VS Code.
-
-A customised fork of [Aide](https://github.com/codestoryai/aide), an open-source AI code editor that combines VS Code with agentic AI capabilities including chat+edit flow, proactive linting agents, and inline editing.
-
-**Stack:** TypeScript · VS Code Fork · AI
+**Stack:** PHP · MySQL · OpenEMR (upstream project)
 
 ---
+
 
 ### [EMR Select](https://github.com/bewayo2/EMRSelect) `JavaScript` `Public`
 > Decision tool to help clinics evaluate and select an EMR system.
@@ -339,46 +379,36 @@ Interactive tool guiding healthcare practices through structured criteria to ide
 
 ---
 
-### [Local Paradyme](https://github.com/bewayo2/Localparadyme) `TypeScript` `Private`
-> Self-hosted local deployment build of Paradyme EMR.
+### [Local Paradyme / AgentCare MCP](https://github.com/bewayo2/Localparadyme) `TypeScript` `Private`
+> Experimental local healthcare integration and MCP server code.
 
-A locally deployable configuration of the Paradyme EMR system, optimised for clinics running on-premises infrastructure rather than cloud-hosted environments.
+The package identifies itself as `agentcare-mcp` and includes an MCP SDK, Express dependencies, connector modules and a starter React/Vite interface. The code inspected does not substantiate the previous claim of a complete locally deployable Paradyme EMR.
 
-**Stack:** TypeScript
+**Stack:** TypeScript · Model Context Protocol SDK · Express · React/Vite
 
 ---
 
-## Revenue Cycle Management
+## Finance & Revenue Operations
 
-AI-powered tools for medical billing, claim recovery, and practice financial operations.
+Software for medical revenue workflows and personal finance tooling.
 
 ### [Settle](https://github.com/bewayo2/SettleApp) `Python` `Private`
-> AI-powered revenue cycle management for independent medical practices.
+> Revenue-cycle operations application in development for independent medical practices.
 
-Medical practices typically see 5–15% of claims denied on first submission, and physicians lose an average of 13 hours/week to payer administrative work. Settle automates EOB analysis, claim appeals, patient billing, and revenue tracking so practices can focus on care.
+The codebase includes claims, insurance receivables, payment and short-pay workflows, imports, documents, dashboards, reminders, and background jobs. It contains engineering standards addressing access controls and clinic-level data separation. The portfolio does **not** claim completed HIPAA compliance, live integrations with every payer, or independently verified recovery outcomes. The README includes local setup and test instructions, but production readiness has not been established by this review.
 
-**Key stats Settle addresses:**
-- Up to 15% initial claim denial rate (private payers)
-- 70% of denied claims overturned on appeal — but only after costly rework
-- 1–3% of net revenue lost annually to commercial underpayments
-- Target: A/R under 30–40 days (AAFP benchmark)
-
-**Features:**
-- **AI EOB Analysis** — Reads every Explanation of Benefits in seconds, flags underpayments, denials, and discrepancies across all major payer formats
-- **Automated Claim Follow-Up** — Auto-generates appeals with supporting documentation; tracks every claim from submission to payment; prioritises by recovery value
-- **Real-Time Revenue Dashboard** — Live cash-flow forecasting, payer performance scorecards, aging bucket analysis
-- **Smart Patient Billing** — Calculates patient responsibility post-insurance, sends clear statements, supports payment plans — fully HIPAA compliant
-
-**How it works:**
-1. Connect your practice — import billing records in minutes, no IT overhaul
-2. AI analyses every claim — cross-references contracted rates, identifies every underpayment and denial
-3. Recover what you're owed — Settle generates appeals, sends statements, tracks every dollar to resolution
-
-**Stack:** Python · AI/LLM · HIPAA Compliant  
-**Contact:** bewaji@bewajihealth.com
+**Stack:** Python/FastAPI · PostgreSQL · Redis/Celery · Next.js · OpenAI integrations
 
 ---
 
+### [KinCFO Licensing & Demo](https://github.com/bewayo2/KinCFO) `TypeScript` `Private`
+> Licensing services and a controlled public demonstration for a personal-finance assistant.
+
+The accessible repository contains a Firebase-based license server and deterministic demo tools using fictional household data. It does not contain evidence of an entire standalone finance application or live bank integration. KinCFO is **personal finance tooling**, separate from Settle's medical revenue workflows.
+
+**Stack:** TypeScript · Firebase Cloud Functions/Firestore
+
+---
 ## Goal & Project Management
 
 Personal and business planning tools.
@@ -392,12 +422,12 @@ Users set long-horizon goals (10/5/3/1 years) across life buckets, then cascade 
 
 ---
 
-### [PG Annie (Early Prototype)](https://github.com/bewayo2/PG-Annie) `HTML` `Private`
-> Original HTML prototype of the PG Annie goal planning tool.
+### [PG Annie (Earlier Flask Version)](https://github.com/bewayo2/PG-Annie) `Python` `Private`
+> Earlier web application for goal planning, not a static HTML-only prototype.
 
-The initial proof-of-concept for the PG Annie goal planner, built in plain HTML/JS before the full TypeScript rewrite. Established the core goal-cascading model and UX flow.
+Includes Flask, Firebase authentication/data integration, planning logic and AI-related modules. Separate from the newer React/TypeScript and FastAPI implementation in [PGAnnie](https://github.com/bewayo2/PGAnnie).
 
-**Stack:** HTML · JavaScript
+**Stack:** Python · Flask · Firebase · HTML templates
 
 ---
 
@@ -462,11 +492,11 @@ A repository of analytical work including exploratory data analysis, visualisati
 Tools for organisational security assessment and compliance readiness.
 
 ### [27Readiness](https://github.com/bewayo2/27Readiness) `JavaScript` `Public`
-> Cybersecurity readiness assessment tool for organisations.
+> ISO 27001-aligned information security readiness self-assessment.
 
-Guides organisations through a structured self-assessment of their cybersecurity posture based on ISO 27001 / NIST-aligned controls. Produces a readiness score, gap analysis, and prioritised remediation roadmap — helping teams understand where they stand before a formal audit or certification.
+React/MUI questionnaire covering information-security management topics, with assessment interaction and Excel export. Code specifically references ISO 27001; NIST coverage, audit accreditation and certification readiness have not been independently verified.
 
-**Stack:** JavaScript
+**Stack:** React · Material UI · Excel export · Express
 
 ---
 
@@ -474,12 +504,15 @@ Guides organisations through a structured self-assessment of their cybersecurity
 
 | Metric | Count |
 |--------|-------|
-| Total repositories | 51 |
-| Public | 20 |
-| Private | 31 |
-| Primary languages | Python (22), JavaScript (8), HTML (6), TypeScript (4), CSS (2), PHP (1), C# (1) |
-| Healthcare-focused | ~31 |
+| Accessible GitHub repositories (including this showcase repository) | 55 |
+| Public repositories | 21 |
+| Private repositories | 34 |
+| Non-showcase repositories | 54 |
+| Known empty repositories | 4 (Brainkick, BrainkickFE, BrainKick-Reg, Inventorymatching) |
+| Other minimal placeholder | MediScripts (name-only README) |
+
+*These are repository counts, not counts of completed products. Several repositories share code, represent forks or prototypes, or belong to a single multi-repository project.*
 
 ---
 
-*Last updated: July 2026*
+*Repository descriptions checked: 9 November 2026. Source inspection does not constitute runtime testing or a compliance assessment.*
