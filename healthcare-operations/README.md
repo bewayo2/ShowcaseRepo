@@ -1,98 +1,86 @@
 # Healthcare Operations Projects
 
-Systems for managing clinical workflows, inventory, equipment, and process documentation.
+Tools for documentation, equipment workflows, record digitisation and inventory.
 
----
+## RoomManager / Procedure Manager
+**Repository:** [bewayo2/RoomManager](https://github.com/bewayo2/RoomManager) · **Status:** In development; private
 
-## RoomManager (Procedure Manager)
-**Repo:** [bewayo2/RoomManager](https://github.com/bewayo2/RoomManager) · `TypeScript` · `Private`
+Inventory and procedure management with item definitions, FEFO stock handling, purchase orders, procedure consumption, stock adjustments and reporting. The repository explicitly lists AI label extraction and invoice matching as planned rather than completed features.
 
-Full-stack inventory and procedure management system for healthcare clinics. Tracks medical supplies from purchase to procedure usage with full audit trails.
-
-### What it does
-- **Item Master**: Centralised product definitions with reorder points, safety stock, and vendor preferences
-- **FEFO Stock Rotation**: First-Expiry-First-Out logic to minimise waste and ensure compliance
-- **Purchase Orders**: Create, receive, and track POs end-to-end
-- **Procedure Tracking**: Logs item consumption per procedure with full audit trail
-- **Reporting**: Low stock alerts, usage reports, expiry tracking, variance analysis
-- **AI Features** *(coming)*: Label scanning for batch/expiry extraction, invoice matching
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Backend | Node.js · TypeScript · Express |
-| Frontend | React · TypeScript · Vite · React Router |
-| Database | Firebase Firestore |
-| Validation | Zod |
+**Technology:** TypeScript, Express, React, Firebase Firestore
 
 ---
 
 ## Scan Progress Tracker
-**Repo:** [bewayo2/ScanProgressTracker](https://github.com/bewayo2/ScanProgressTracker) · `Python` · `Private`
+**Repository:** [bewayo2/ScanProgressTracker](https://github.com/bewayo2/ScanProgressTracker) · **Status:** Application code; private
 
-Flask app for monitoring digitisation progress of paper medical records. Analyses entire PDF folder trees and reports on scanning throughput.
+Flask reporting tool that surveys PDF scan folders and generates volume, shift, performance and weekend-adjusted completion reports, with charts and PDF export.
 
-### What it does
-- Recursively scans all PDFs in a folder and subfolders
-- Extracts creation dates and page counts from metadata
-- Generates 7 chart visualisations: cumulative output, weekly comparisons, shift splits (morning/afternoon), peak rates, efficiency metrics, and weekend-adjusted completion forecasts
-- Exports complete reports to PDF
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Backend | Python · Flask |
-| Charts | Chart.js |
-| Export | PDF generation |
+**Technology:** Python, Flask, Chart.js
 
 ---
 
 ## SJH Equipment Commissioning
-**Repo:** [bewayo2/SJHEquipmentCommissioning](https://github.com/bewayo2/SJHEquipmentCommissioning) · `JavaScript` · `Private`
+**Repository:** [bewayo2/SJHEquipmentCommissioning](https://github.com/bewayo2/SJHEquipmentCommissioning) · **Status:** Application code; private
 
-React application for tracking equipment commissioning status at St John of God Hospital. Built with React + Vite.
+React app with room equipment checklists, biomedical screens/reports, item search, supplier register, and bill-of-quantities/reference views. Actual institutional rollout has not been verified.
 
-**Stack:** React · Vite · JavaScript
+**Technology:** React, Vite, JavaScript
 
 ---
 
 ## SJH Swimlane Generator
-**Repo:** [bewayo2/SJHSwimlaneGenerator](https://github.com/bewayo2/SJHSwimlaneGenerator) · `HTML` · `Public`
+**Repository:** [bewayo2/SJHSwimlaneGenerator](https://github.com/bewayo2/SJHSwimlaneGenerator) · **Status:** Web tool; public
 
-AI-powered tool for generating swimlane and process flow diagrams from text descriptions. Built for SJH clinical and operations teams to document workflows.
+Browser-based generator for swimlane and process diagrams from workflow descriptions.
 
-**Stack:** HTML · JavaScript · AI
+**Technology:** HTML, JavaScript
 
 ---
 
 ## AI OCR Sorter
-**Repo:** [bewayo2/AIOCRSorter](https://github.com/bewayo2/AIOCRSorter) · `Python` · `Public`
+**Repository:** [bewayo2/AIOCRSorter](https://github.com/bewayo2/AIOCRSorter) · **Status:** Processing script; public
 
-Automatically classifies and sorts large batches of scanned documents using OCR and AI, eliminating manual document routing.
+Local PDF-processing pipeline that extracts hospital numbers, creates bookmarks, and splits and groups scanned pages by identifiers. Contains Qwen vision and document-processing dependencies; no general classifier validation is claimed.
 
-**Stack:** Python · OCR · AI Classification
+**Technology:** Python, PDF tools, Qwen2-VL
 
 ---
 
 ## SentinelQG
-**Repo:** [bewayo2/SentinelQG](https://github.com/bewayo2/SentinelQG) · `C#` · `Private`
+**Repository:** [bewayo2/SentinelQG](https://github.com/bewayo2/SentinelQG) · **Status:** Application code; private
 
-Enterprise quality management solution for healthcare organisations. Manages clinical quality indicators, incident tracking, audit workflows, corrective actions, and compliance reporting — giving quality teams a unified governance system across departments and sites.
+C#/.NET healthcare quality and governance software, with supporting service, test and infrastructure directories. Features relate to quality management, audits and incident processes, but deployment and completeness require confirmation.
 
-**Stack:** C# · .NET
+**Technology:** C#, .NET
 
 ---
 
-## SJH Org Chart
-**Repo:** [bewayo2/SJHOrgchart](https://github.com/bewayo2/SJHOrgchart) · `HTML` · `Private`
+## SJH Org Chart (single-file)
+**Repository:** [bewayo2/SJHOrgchart](https://github.com/bewayo2/SJHOrgchart) · **Status:** Web visualisation; private
 
-Interactive organisational chart for St John of God Hospital. Web-based visualisation of department and reporting structures, built for internal use by HR and operations teams.
+HTML/JavaScript organisational chart for St Jude Hospital, using Google Charts.
 
-**Stack:** HTML · JavaScript
+**Technology:** HTML, JavaScript
+
+---
+
+## SJH Org Chart (full-stack)
+**Repository:** [bewayo2/sjh-org-chart](https://github.com/bewayo2/sjh-org-chart) · **Status:** Separate application; private
+
+Client/server organisational-chart project with a Prisma-backed server and PNG generation scripts. Distinct from the single-file chart.
+
+**Technology:** TypeScript, Node.js, Prisma
 
 ---
 
 ## Inventory Matching
-**Repo:** [bewayo2/Inventorymatching](https://github.com/bewayo2/Inventorymatching) · `Public`
+**Repository:** [bewayo2/Inventorymatching](https://github.com/bewayo2/Inventorymatching) · **Status:** Empty placeholder; public
 
-Cross-references inventory records to identify duplicates, discrepancies, and unmatched items — supporting stock audits and data migration workflows.
+No files were found on the default branch. The repository cannot substantiate a working matching or reconciliation function.
+
+
+
+---
+
+*Source-checked 9 November 2026. Descriptions do not assert clinical validation, institutional adoption or production readiness unless separately evidenced.*

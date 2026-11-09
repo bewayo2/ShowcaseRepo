@@ -1,108 +1,105 @@
-# AI Productivity Tools
+# AI Productivity and Development Tools
 
-LLM-powered automation tools that accelerate knowledge work and business processes.
-
----
+Document, research, recruitment, knowledge and developer workflows. An application may span more than one repository.
 
 ## MasterLister
-**Repo:** [bewayo2/masterlister](https://github.com/bewayo2/masterlister) · `JavaScript` · `Private`
+**Repository:** [bewayo2/masterlister](https://github.com/bewayo2/masterlister) · **Status:** Application code; private
 
-Multi-user collaborative inventory counter using AI vision. Users photograph items from multiple angles; GPT-5.1 Vision extracts names, quantities, and details automatically.
+Collaborative inventory-counting app with photo-based item identification, Firebase data synchronization and export.
 
-### What it does
-- Multi-angle camera capture for better AI recognition accuracy
-- **GPT-5.1 Vision** (Responses API) extracts item details from photos
-- Real-time multi-user collaboration via Firebase live sync
-- Location-based organisation within counts
-- Shared account-level item master list for consistent naming
-- CSV export at any point
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18 · Vite |
-| Backend/DB | Firebase (Auth + Firestore) |
-| AI | OpenAI GPT-5.1 Vision (Responses API) |
-| Camera | react-webcam |
-| Export | papaparse (CSV) |
+**Technology:** React, Firebase, OpenAI Vision
 
 ---
 
 ## Strategic Blueprint GPTs
-**Repo:** [bewayo2/StrategicBlueprintGPTs](https://github.com/bewayo2/StrategicBlueprintGPTs) · `Python` · `Private`
+**Repository:** [bewayo2/StrategicBlueprintGPTs](https://github.com/bewayo2/StrategicBlueprintGPTs) · **Status:** Pipeline code; private
 
-Multi-client pipeline that processes business documents (DOCX/PDF) into structured JSON knowledge bases ready to power chatbots.
+Processes source documents into structured client-specific knowledge bases for downstream chatbot use.
 
-### What it does
-- Supports multiple isolated clients, each with their own data, configs, prompts, and outputs
-- Extracts and structures content from DOCX/PDF into sections and summaries
-- Produces `knowledge_base.json` per client for direct chatbot integration
-- Configurable per-client prompts (summarisation, Q&A, tagging, etc.)
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Language | Python |
-| AI | OpenAI GPT (LLM pipeline) |
-| Input formats | DOCX · PDF |
-| Output | Structured JSON knowledge base |
+**Technology:** Python, PDF/DOCX, OpenAI
 
 ---
 
 ## AI Hiring Tool
-**Repo:** [bewayo2/AIhiringtool](https://github.com/bewayo2/AIhiringtool) · `Python` · `Public`
+**Repository:** [bewayo2/AIhiringtool](https://github.com/bewayo2/AIhiringtool) · **Status:** Local script; public
 
-AI-assisted candidate screening that matches resumes against role requirements and generates structured assessments, reducing manual review time in early hiring stages.
+Python resume-to-job comparison and scoring scripts. Hard-coded local example paths indicate a demonstration rather than a ready-to-deploy recruitment platform.
 
-**Stack:** Python · AI/LLM
-
----
-
-## Audio Transcription App
-**Repo:** [bewayo2/audiotransriptionapp](https://github.com/bewayo2/audiotransriptionapp) · `Python` · `Public`
-
-Lightweight utility to convert audio files to text using OpenAI Whisper. Focused, minimal, runs locally.
-
-**Stack:** Python · OpenAI Whisper
-
----
-
-## Ref Extractor
-**Repo:** [bewayo2/RefExtractor](https://github.com/bewayo2/RefExtractor) · `HTML` · `Public`
-
-Browser-based tool for researchers to extract structured citation data from academic paper DOIs and URLs — no server, runs entirely in the browser.
-
-**Stack:** HTML · JavaScript
+**Technology:** Python, OpenAI, python-docx
 
 ---
 
 ## arvohire
-**Repo:** [bewayo2/arvohire](https://github.com/bewayo2/arvohire) · `Python` · `Private`
+**Repository:** [bewayo2/arvohire](https://github.com/bewayo2/arvohire) · **Status:** Application code; private
 
-Culture-based recruitment platform that goes beyond skills matching to evaluate candidate-culture fit. Structures the hiring process around organisational values, team dynamics, and behavioural indicators — helping teams hire for long-term retention as much as capability.
+Recruitment workflow app with organization, job and subscription modules and AI-related scoring code. Claims of fair hiring performance or improved retention have not been validated.
 
-**Stack:** Python
+**Technology:** Python, Firebase
+
+---
+
+## ContactBuilder
+**Repository:** [bewayo2/ContactBuilder](https://github.com/bewayo2/ContactBuilder) · **Status:** Lead-research harness; private
+
+Research and contact-enrichment scripts with Exa discovery, Hunter enrichment, GPT drafting, exports and related outreach workflows.
+
+**Technology:** Python, Exa, Hunter, OpenAI
+
+---
+
+## Audio Transcription App
+**Repository:** [bewayo2/audiotransriptionapp](https://github.com/bewayo2/audiotransriptionapp) · **Status:** Small local tool; public
+
+Single-file audio transcription script.
+
+**Technology:** Python, Whisper
+
+---
+
+## Ref Extractor
+**Repository:** [bewayo2/RefExtractor](https://github.com/bewayo2/RefExtractor) · **Status:** Browser tool; public
+
+Extracts citation data from academic identifiers or paper links. Also referenced under Data & Research.
+
+**Technology:** HTML, JavaScript
 
 ---
 
 ## BrainKick
-**Repo:** [bewayo2/Brainkick](https://github.com/bewayo2/Brainkick) · `Private`
+**Repository:** [bewayo2/Brainkick](https://github.com/bewayo2/Brainkick) · **Status:** Multi-repo project; private
 
-Chat-to-document and chat-to-PDF platform. Conversational interface that lets users generate, edit, and export structured documents and PDFs through natural language chat. Built as a multi-service architecture:
+Backend code is in [Brainkick-BE](https://github.com/bewayo2/Brainkick-BE) and web app code is in [BrainKick-Live](https://github.com/bewayo2/BrainKick-Live). The separate Brainkick, BrainkickFE and BrainKick-Reg repositories are currently empty. An end-to-end integrated platform was not verified.
 
-| Repo | Role |
-|------|------|
-| [Brainkick](https://github.com/bewayo2/Brainkick) | Core app |
-| [BrainkickFE](https://github.com/bewayo2/BrainkickFE) | Frontend |
-| [Brainkick-BE](https://github.com/bewayo2/Brainkick-BE) | Backend API |
-| [BrainKick-Reg](https://github.com/bewayo2/BrainKick-Reg) | Registration service |
-| [BrainKick-Live](https://github.com/bewayo2/BrainKick-Live) | Live collaboration layer |
+**Technology:** Python and web technology across repositories
 
 ---
 
 ## Utility Projects
-**Repo:** [bewayo2/Utilityprojects](https://github.com/bewayo2/Utilityprojects) · `Python` · `Private`
+**Repository:** [bewayo2/Utilityprojects](https://github.com/bewayo2/Utilityprojects) · **Status:** Small utilities; private
 
-Collection of reusable Python utility scripts and automation tools supporting other projects — data processing helpers, file manipulation tools, and automation snippets.
+A minimal Python utility-script repository.
 
-**Stack:** Python
+**Technology:** Python
+
+---
+
+## BHS Knowledge Base Sync
+**Repository:** [bewayo2/BHSKnowledgebasesync](https://github.com/bewayo2/BHSKnowledgebasesync) · **Status:** Automation code; private
+
+Syncs a curated Google Drive evidence library to an OpenAI vector store, tracking changes and excluding restricted or raw review folders. Configured as a GitHub Actions workflow.
+
+**Technology:** Python, Google Drive API, OpenAI Vector Stores
+
+---
+
+## Paradyme Aide
+**Repository:** [bewayo2/Paradyme-aide](https://github.com/bewayo2/Paradyme-aide) · **Status:** Upstream code-editor fork; public
+
+Fork of Aide/VS Code and unrelated to EMR functionality. Original upstream functionality should be credited to its maintainers.
+
+**Technology:** TypeScript, VS Code/Aide
+
+
+---
+
+*Source-checked 9 November 2026. Descriptions do not assert clinical validation, institutional adoption or production readiness unless separately evidenced.*

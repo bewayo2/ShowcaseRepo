@@ -1,5 +1,7 @@
 # Data & Research Tools
 
+*Repository summaries reviewed 9 November 2026. Research outputs require independent source and methodological review.*
+
 Visualisation and analysis tools for clinical and research data.
 
 ---
@@ -63,6 +65,15 @@ Browser-based tool for researchers to extract and format structured citation dat
 Delivers personalised journal article summaries based on user-defined keywords. Users submit topic areas or keywords; SciWrap retrieves relevant journal articles, summarises them using an LLM, and delivers digestible research briefings — keeping clinicians and researchers current without manual literature review.
 
 **Stack:** Python · LLM · Academic APIs
+
+---
+
+## Academic Writing
+**Repo:** [bewayo2/AcademicWriting](https://github.com/bewayo2/AcademicWriting) · `Python` · `Private`
+
+Literature-review support scripts for extracting source links, retrieving and converting PDFs, doing assisted research extraction, and assembling synthesis tables. This is a research workflow, not an automated source-quality guarantee.
+
+**Stack:** Python · OpenAI · Exa · PDF processing
 
 ---
 

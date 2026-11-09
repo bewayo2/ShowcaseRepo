@@ -1,29 +1,33 @@
 # Goal & Project Management
 
-Personal and business planning tools.
+Personal planning applications and connected task/calendar automation.
+
+## PG Annie (current)
+**Repository:** [bewayo2/PGAnnie](https://github.com/bewayo2/PGAnnie) · **Status:** Application code; private
+
+Full-stack planning app with multi-horizon goals, quarterly objectives, monthly and weekly tasks, reviews and dashboards. Its documentation describes React/FastAPI/Firebase architecture.
+
+**Technology:** React, TypeScript, FastAPI, Firebase
 
 ---
 
-## PG Annie
-**Repo:** [bewayo2/PGAnnie](https://github.com/bewayo2/PGAnnie) · `TypeScript` · `Private`
+## PG Annie (earlier Flask version)
+**Repository:** [bewayo2/PG-Annie](https://github.com/bewayo2/PG-Annie) · **Status:** Earlier application; private
 
-Full-stack personal goal planning application with OKR-style quarterly planning. Users set long-horizon goals across life buckets and cascade them into actionable weekly tasks.
+Earlier implementation using Flask, Firebase, templates and AI-assisted planning logic. It should not be described as a static HTML-only prototype.
 
-### What it does
-- **Bucket Management**: Define 3–5 life areas (career, health, relationships, etc.)
-- **Long-term Goals**: Set goals at 10-year, 5-year, 3-year, 1-year, and annual levels
-- **Quarterly Planning**: OKR-style objectives with key results and progress tracking
-- **Monthly Goals**: Linked to quarterly objectives with priority levels
-- **Weekly Planning**: Week-by-week activities with workload calculations
-- **Dashboard**: Overview of current quarter/month/week with at-risk item alerts
-- **Reviews**: Weekly check-ins and structured review flows
-- **Settings**: Profile management, capacity settings, account management
+**Technology:** Python, Flask, Firebase
 
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React · TypeScript · Tailwind CSS · Firebase SDK |
-| Backend | Python · FastAPI · Firebase Admin SDK |
-| Database | Firebase Firestore |
-| Auth | Firebase Auth (email/password) |
+---
 
+## Personal Planner
+**Repository:** [bewayo2/PersonalPlanner](https://github.com/bewayo2/PersonalPlanner) · **Status:** Automation scripts; private
+
+Python modules for ClickUp task operations and reporting, Google Drive search/linking, and Google Calendar planning windows.
+
+**Technology:** Python, ClickUp, Google Drive, Google Calendar
+
+
+---
+
+*Source-checked 9 November 2026. Source review does not constitute production, compliance or outcome validation.*
