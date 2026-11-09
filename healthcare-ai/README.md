@@ -1,71 +1,59 @@
 # Healthcare AI Projects
 
-AI-powered tools applied directly to clinical workflows, diagnostics, and patient care.
-
----
+Source-checked clinical AI prototypes and supporting applications.
 
 ## WoundCareAI
-**Repo:** [bewayo2/WoundCareAI](https://github.com/bewayo2/WoundCareAI) · `Python` · `Private`
+**Repository:** [bewayo2/WoundCareAI](https://github.com/bewayo2/WoundCareAI) · **Status:** Research prototype; private
 
-Built for the **Google Gemma 3n Impact Challenge**. A mobile-first web application that uses Google's Gemma 3n multimodal AI to provide comprehensive wound assessment without internet access — designed for healthcare professionals in remote areas.
+Built for the Google Gemma 3n Impact Challenge. The Streamlit interface accepts wound photos and notes, produces structured AI-generated assessments, and exports text reports. Local/offline operation is described by the source README but has not been independently tested. Medical decisions still require a qualified clinician.
 
-### What it does
-- Captures wound photos via device camera
-- Records voice notes alongside images
-- Analyses wounds across 15 medical parameters: location, size, shape, wound bed tissue, edges, depth, exudate, surrounding skin, infection signs, pain severity, and more
-- Stores up to 10 previous reports for progress tracking
-- Exports analysis reports as text files
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| AI Model | Google Gemma 3n (multimodal) |
-| Language | Python |
-| Design | Mobile-first, works offline |
+**Technology:** Python, Streamlit, Gemma 3n, PyTorch
 
 ---
 
 ## ScanAuditor
-**Repo:** [bewayo2/scanauditor](https://github.com/bewayo2/scanauditor) · `JavaScript` · `Public`
+**Repository:** [bewayo2/scanauditor](https://github.com/bewayo2/scanauditor) · **Status:** Active desktop QA tool; public
 
-AI audit tool for scanned handwritten medical records. Identifies data integrity issues, multi-patient file mixups, and date mismatches across entire document sets.
+Audits scanned medical-record PDFs page by page. Current defaults use local Ollama Qwen3 vision and text models. JavaScript rules check patient identifiers, dates, quality and complete page-processing coverage. Resumable folder audits, SQLite review workspace, and optional authorized OpenAI vision are documented. The tool cannot independently establish completeness against original paper records.
 
-### What it does
-- Runs **PaddleOCR** on all pages of scanned documents to extract handwritten text
-- Uses **Gemma 3n 4b** to analyse text for patient names, hospital numbers (5–6 digit), date inconsistencies
-- Flags multi-patient documents and data integrity violations
-- Processes entire document batches, not page-by-page
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| OCR | PaddleOCR |
-| AI Analysis | Google Gemma 3n 4b |
-| Language | JavaScript |
+**Technology:** Electron/JavaScript, Python, Ollama Qwen3, SQLite
 
 ---
 
 ## BHS Virtual Health Assistant
-**Repo:** [bewayo2/BHSVirtualHealthAssistant](https://github.com/bewayo2/BHSVirtualHealthAssistant) · `Python` · `Public`
+**Repository:** [bewayo2/BHSVirtualHealthAssistant](https://github.com/bewayo2/BHSVirtualHealthAssistant) · **Status:** Prototype; public
 
-Conversational AI chatbot demo for Bright Health Solutions, enabling patient-facing interactions for common health queries.
+FastAPI and web frontend proof of concept. The backend README calls the concept JAMCare and uses GPT-4o-mini for Jamaica-focused general health information and escalation guidance. It is not an independently approved medical advice service.
 
-**Stack:** Python
+**Technology:** Python, FastAPI, OpenAI API, web frontend
 
 ---
 
 ## BHS Discharge Summary Generator
-**Repo:** [bewayo2/BHSDischargeSummaryGenerator](https://github.com/bewayo2/BHSDischargeSummaryGenerator) · `HTML/JS` · `Public`
+**Repository:** [bewayo2/BHSDischargeSummaryGenerator](https://github.com/bewayo2/BHSDischargeSummaryGenerator) · **Status:** Prototype; public
 
-Web-based tool that generates structured clinical discharge summaries for BHS clinical staff.
+An HTML interface and Express backend generate a draft summary from supplied clinical notes using an OpenAI chat endpoint. The source references an older GPT-4 preview model; compatibility and clinical quality need testing. A clinician must review outputs.
 
-**Stack:** HTML · JavaScript
+**Technology:** HTML, JavaScript, Node.js/Express, OpenAI API
 
 ---
 
 ## Sepsis Predictor
-**Repo:** [bewayo2/Sepsispredictor](https://github.com/bewayo2/Sepsispredictor) · `Python` · `Public`
+**Repository:** [bewayo2/Sepsispredictor](https://github.com/bewayo2/Sepsispredictor) · **Status:** Research/educational demo; public
 
-Machine learning model for early sepsis risk detection from clinical data, enabling earlier clinical intervention.
+A Streamlit dashboard and saved machine-learning model examine sepsis-related risk factors including lactate, temperature and mean arterial pressure. No prospective clinical validation or clinical deployment is established by the repository.
 
-**Stack:** Python · Machine Learning
+**Technology:** Python, scikit-learn, Streamlit
+
+---
+
+## MediScripts
+**Repository:** [bewayo2/MediScripts](https://github.com/bewayo2/MediScripts) · **Status:** Name-only placeholder; private
+
+Contains a minimal README with the repository name and no verifiable implementation. No product claims are made.
+
+
+
+---
+
+*Source-checked 9 November 2026. Descriptions do not assert clinical validation, institutional adoption or production readiness unless separately evidenced.*
