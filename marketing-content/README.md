@@ -1,87 +1,96 @@
 # Marketing & Content Tools
 
-AI tools for generating, optimising, and repurposing content at scale.
+AI-assisted writing, video, SEO and institutional communication tooling.
+
+## Media Content Generator
+**Repository:** [bewayo2/MediaContentGenerator](https://github.com/bewayo2/MediaContentGenerator) · **Status:** Pipeline code; private
+
+Converts source media into transcripts and platform-specific drafts. The project now includes bundle creation, editorial QA, an approval interface and optional scheduling workflows. Integration with the ShortsGenerator package is documented. Publication depends on configuration and approval.
+
+**Technology:** Python, Whisper, OpenAI and Anthropic APIs, FFmpeg
 
 ---
 
-## Caption Generator
-**Repo:** [bewayo2/CaptionGenerator](https://github.com/bewayo2/CaptionGenerator) · `Python` · `Private`
+## Video Editing
+**Repository:** [bewayo2/VideoEditing](https://github.com/bewayo2/VideoEditing) · **Status:** Open-source adaptation; private
 
-Automated content generator for BHS marketing. Transcribes video/audio files, then generates platform-specific content based on duration — from short captions to full podcast show notes.
+Based on the MIT-licensed Browser Use `video-use` project, with BHS-specific caption, brand, editorial and podcast-audiogram guidance. Its upstream authors deserve attribution. Workflows include transcript-led editing and FFmpeg/Remotion/Manim effects.
 
-### Content by Duration
-| Duration | Output |
-|----------|--------|
-| < 2 min | Shorts captions |
-| 2–8 min | LinkedIn, YouTube, Facebook posts |
-| 8–45 min | Posts + email content |
-| 45+ min | All above + comprehensive show notes |
-
-### What it does
-- Transcribes audio/video using **OpenAI Whisper** (with chunking for large files)
-- Detects content type for long videos (podcast, webinar, tutorial, etc.)
-- Generates all content with **GPT-4.1** with contextual awareness of content type
-- Outputs everything to a Word document
-- Supports MP4, MP3, and other common media formats
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| Transcription | OpenAI Whisper |
-| Content Generation | OpenAI GPT-4.1 |
-| Output | Word document (python-docx) |
-| Language | Python |
+**Technology:** Python, FFmpeg, Claude Code, Remotion, Manim
 
 ---
 
-## Keyword Generator
-**Repo:** [bewayo2/KeyWordGenerator](https://github.com/bewayo2/KeyWordGenerator) · `Python` · `Public`
+## SJH Mockup Builder
+**Repository:** [bewayo2/SJHMockupBuilder](https://github.com/bewayo2/SJHMockupBuilder) · **Status:** Browser app; private
 
-Streamlit app that pulls keyword ideas from Google Ads Keyword Planner and uses GPT to categorise them and generate complete SEO metadata for blog posts.
+Editable page mockups, sections, layers, drag-and-drop, JSON project import/export and PNG output for St Jude Hospital concepts.
 
-### What it does
-- Connects to **Google Ads API** to fetch keyword volume and competition data
-- Uses **GPT-5.2** to categorise keywords with SEO-focused analysis
-- Generates Focus Keyphrase, SEO Title, and SEO Excerpt per blog post
-- Exports full keyword report as CSV
-
-### Tech Stack
-| Layer | Technology |
-|-------|-----------|
-| UI | Python · Streamlit |
-| Keyword Data | Google Ads API (Keyword Planner) |
-| AI Analysis | OpenAI GPT-5.2 |
-
----
-
-## Blog Outline & SEO Generator
-**Repo:** [bewayo2/BlogOutlineandSEOGenerator](https://github.com/bewayo2/BlogOutlineandSEOGenerator) · `Python` · `Private`
-
-Companion to the Keyword Generator. Takes keyword research input and produces structured blog outlines with full SEO-optimised metadata.
-
-**Stack:** Python · Streamlit · OpenAI GPT
-
----
-
-## Training Mindmaps
-**Repo:** [bewayo2/Trainingmindmaps](https://github.com/bewayo2/Trainingmindmaps) · `Python` · `Public`
-
-Converts Word training documents into standalone interactive Cytoscape.js mind map HTML files using an LLM to extract and structure the content. Output is a single portable HTML file — no server needed.
-
-**Stack:** Python · OpenAI LLM · Cytoscape.js
+**Technology:** HTML, CSS, JavaScript
 
 ---
 
 ## Shorts Generator
-**Repo:** [bewayo2/Shortsgenerator](https://github.com/bewayo2/Shortsgenerator) · `Private`
+**Repository:** [bewayo2/Shortsgenerator](https://github.com/bewayo2/Shortsgenerator) · **Status:** Video processing code; private
 
-Generates viral short-form clips from long-form video content. Analyses source videos to identify the highest-engagement moments and automatically extracts them as clips optimised for YouTube Shorts, TikTok, and Instagram Reels. A separate pipeline from Caption Generator — focused on clip extraction rather than text output.
+Separate short-form video extraction pipeline and transcription guidance. Its code is also represented in MediaContentGenerator; not counted as evidence of an independent end-to-end platform.
+
+**Technology:** Python, FFmpeg
+
+---
+
+## Keyword Generator
+**Repository:** [bewayo2/KeyWordGenerator](https://github.com/bewayo2/KeyWordGenerator) · **Status:** Streamlit app; public
+
+Retrieves Google Ads keyword ideas and uses GPT-5.2 to categorize keywords and suggest SEO metadata. CSV export is documented.
+
+**Technology:** Python, Streamlit, Google Ads API, OpenAI
+
+---
+
+## WordPress Manager
+**Repository:** [bewayo2/wordpressmanager](https://github.com/bewayo2/wordpressmanager) · **Status:** CLI and web tooling; private
+
+Contains blog keyword/outline-generation scripts, legacy Streamlit functionality and an ArticlesandBlogs subfolder. This is the available repository associated with the former broken BlogOutlineandSEOGenerator entry.
+
+**Technology:** Python, Google Ads API, WordPress
+
+---
+
+## Training Mindmaps
+**Repository:** [bewayo2/Trainingmindmaps](https://github.com/bewayo2/Trainingmindmaps) · **Status:** Document conversion tool; public
+
+Builds Cytoscape-based interactive HTML mind maps from DOCX using an LLM.
+
+**Technology:** Python, OpenAI, Cytoscape.js
 
 ---
 
 ## Articles & Blogs
-**Repo:** [bewayo2/ArticlesandBlogs](https://github.com/bewayo2/ArticlesandBlogs) · `Python` · `Private`
+**Repository:** [bewayo2/ArticlesandBlogs](https://github.com/bewayo2/ArticlesandBlogs) · **Status:** Writing pipeline; private
 
-Automated pipeline for drafting, structuring, and publishing long-form written content. Supports multi-topic batch generation with configurable tone, length, and SEO settings.
+Drafts and structures long-form content, with SEO assets and WordPress-related utilities. Overlaps in file structure with BHSWriter.
 
-**Stack:** Python · OpenAI GPT
+**Technology:** Python
+
+---
+
+## BHS Writer
+**Repository:** [bewayo2/BHSWriter](https://github.com/bewayo2/BHSWriter) · **Status:** Writing pipeline; private
+
+Uses Claude and BHS writing guidance to produce a long-form article and an SEO-oriented short version from supplied outlines.
+
+**Technology:** Python, Anthropic
+
+---
+
+## SJH Content & Brand Creator
+**Repository:** [bewayo2/SJH-Content-Brand-Creator](https://github.com/bewayo2/SJH-Content-Brand-Creator) · **Status:** Reusable AI skill; public
+
+Instructions, reference documents, playbooks and templates supporting St Jude Hospital brand-consistent communication. The skill requires approved source materials and human review; it does not itself grant hospital approval.
+
+**Technology:** AI skill files, utilities
+
+
+---
+
+*Source-checked 9 November 2026. Source review does not constitute production, compliance or outcome validation.*
