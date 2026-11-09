@@ -125,11 +125,11 @@ Web tool that converts text descriptions into swimlane or process flow diagrams,
 ---
 
 ### [SJH Org Chart](https://github.com/bewayo2/SJHOrgchart) `HTML` `Private`
-> Interactive organisational chart for St John of God Hospital.
+> Single-file organisational-chart visualisation for St Jude Hospital.
 
-Web-based org chart tool for visualising department and reporting structures within SJH. Built for internal use by HR and operations teams.
+An HTML/JavaScript implementation using Google Charts to display hospital organisational structures. It is distinct from the separately listed full-stack SJH chart repository; institutional deployment was not verified.
 
-**Stack:** HTML · JavaScript
+**Stack:** HTML · JavaScript · Google Charts
 
 ---
 
@@ -264,17 +264,12 @@ Code and features from the upstream Aide project are acknowledged. No independen
 AI tools for generating, optimising, and repurposing content at scale.
 
 ### [Media Content Generator](https://github.com/bewayo2/MediaContentGenerator) `Python` `Private`
-> Automated social media and long-form content from video/audio files.
+> Source-media-to-content pipeline with review and scheduling controls.
 
-Transcribes videos using **OpenAI Whisper**, then uses **GPT-4.1** to generate platform-specific content based on duration:
-- < 2 min → Shorts captions
-- 2–8 min → LinkedIn, YouTube, Facebook posts
-- 8–45 min → Posts + email content
-- 45+ min (podcasts) → All of the above + full show notes
+Processes source audio/video, builds transcripts, prepares channel-specific social copy, thumbnails, and asset bundles. Its current documentation describes draft preparation, editorial checks, an approval UI, optional scheduling through the Late API, and a connected ShortsGenerator module. These are configured workflows, not evidence of unattended or successful production publication.
 
-Outputs to Word documents.
+**Stack:** Python · Whisper · OpenAI/Anthropic APIs · FFmpeg · WordPress and scheduling integrations
 
-**Stack:** Python · OpenAI GPT-4.1 · Whisper
 
 ---
 
@@ -288,7 +283,7 @@ The upstream repository's code and MIT license are attributed to Browser Use. Th
 ---
 
 ### [SJH Mockup Builder](https://github.com/bewayo2/SJHMockupBuilder) `JavaScript` `Private`
-> Browser-based mockup builder for SJH website concepts.
+> Browser-based mockup builder for St Jude Hospital website concepts.
 
 Interactive page mockup canvas with editable sections, layers, properties, drag-and-drop controls, JSON project import/export, and PNG export for individual pages.
 
